@@ -1,0 +1,81 @@
+
+/* Op deze manier inporteer ik de font Montserrat.*/
+@font-face {  
+    font-family: montserrat;
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  }
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "montserrat";
+}
+
+/* Padding rem zorgt voor de ruimte die met de klok mee gaat > boven rechts onder links.*/
+header nav {
+    padding: 1.125rem 16px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: white;
+    width: 100%;
+}
+
+header nav figure {
+    margin: 0;
+}
+
+header nav figure img {
+    max-width: 74px;
+    display: block;
+   }
+
+   header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+
+   header nav section ul {
+    list-style-type: none;
+   }
+
+   header nav section ul li {
+    float: left;
+   }
+
+   header nav section ul li img {
+    padding: 0 8px;
+    width: 24px;
+    height: 22px;
+   }
+
+   main section figure {
+    margin: 0;
+   }
+
+   main section figure img {
+    width: 100%;
+   }
+
+   main {
+    margin-top: 90px;
+   }
+
+   main section {
+    position: relative;
+   }
+
+   main section img {
+    width: 100%;
+   }
+
+   main section figure section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+   }

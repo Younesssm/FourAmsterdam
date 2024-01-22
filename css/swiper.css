@@ -1,0 +1,68 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    padding: 15px;
+    color: black;
+    --g: #000, #0000 1deg 179deg, #000 180deg;
+    --mask: conic-gradient(from -45deg at top 5px right 5px, var(--g)) 100% 0 /52% 100% no-repeat,
+        conic-gradient(from -225deg at bottom 5px left 5px, var(--g)) 0 100%/51% 100% no-repeat;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background: white;
+    text-align: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-disabled {
+    display: none;
+}
+
+.swiper-pagination {
+    margin-left: 10px;
+    text-align: left;
+}
+
+.swiper-pagination span {
+    background: black;
+}
+
+.highlights .swiper-slide img {
+    width: 100%;
+    min-height: 467px;
+    max-height: 467px;
+    object-fit: cover;
+}
+
+/* Volgende content is nog niet te zien, pas op het moment*/
+.highlights .swiper-slide:not(.swiper-slide-active) p,
+.highlights .swiper-slide:not(.swiper-slide-active) figure:nth-of-type(2),
+.highlights .swiper-slide:not(.swiper-slide-active) h4 {
+    display: none;
+}

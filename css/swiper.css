@@ -5,7 +5,7 @@
 
 .swiper-slide {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -21,8 +21,8 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     display: inline-block;
     padding: 15px;
     color: black;
@@ -37,7 +37,7 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 
 .swiper-button-disabled {
@@ -45,7 +45,7 @@
 }
 
 .swiper-pagination {
-    margin-left: 10px;
+    margin-left: 0.625rem;
     text-align: left;
 }
 
@@ -55,8 +55,8 @@
 
 .highlights .swiper-slide img {
     width: 100%;
-    min-height: 467px;
-    max-height: 467px;
+    min-height: 29.188rem;
+    max-height: 29.188rem;
     object-fit: cover;
 }
 

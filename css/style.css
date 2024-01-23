@@ -1,7 +1,7 @@
 /* Root betekent hele document.
-Alle custom vars begin je met --.
+Alle custom var begin je met --.
 Var background color heeft de waarde van --light.
-Op deze manier pas je het een keer aan en veranderd dat op de hele site.*/
+Op deze manier pas je het een keer aan en verandert dat op de hele site.*/
 :root {
     --background-color: var(--light);
     --inverted-background-color: var(--dark);
@@ -38,7 +38,7 @@ Bron: https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custo
     src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
-/**betekent alles, ervoor zorgen dat wanneer je op checkbox klikt, er geen outline komt.
+/* *betekent alles, ervoor zorgen dat wanneer je op checkbox klikt, er geen outline komt.
 Importent krijgt voorrang. */
 *:focus {
     outline: none !important;
@@ -75,7 +75,7 @@ main > section > section > section > h1 {
 h2 {
     font-size: 1rem;
 }
- /* > betekent de directe kind en zorgt ervoor dat je niet alle "sections" pakt.*/
+ /* > betekent de directe child en zorgt ervoor dat je niet alle "sections" pakt.*/
 h3, main > section > section > section > p {
     font-size: 1.375rem;
     font-weight: bold;
@@ -146,7 +146,7 @@ header nav section ul li {
 
 header nav section ul li i {
     padding: 0 0.5rem;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--dark);
 }
 
@@ -194,7 +194,7 @@ main section:nth-of-type(1) figure section p {
 /* --mask is een variable met een lineair verloop. De kleur begint transparant,
 wordt zwart, en gaat daarna weer naar transparant.
 Met -webkit-mask: var(--mask); wordt het masker toegepast en doormiddel van -webkit-mask: worden
-oudere versies van de brouwser ondersteund.*/
+oudere versies van de browser ondersteund.*/
 main section figure section a,
 main .highlights article figure:last-child a {
     display: block;
@@ -236,7 +236,7 @@ main .highlights article figure:last-child {
     padding: 0 1rem;
 }
 
-/* Met > wordt een directe kind van het voorgaande element geselecteerd.*/
+/* Met > wordt een directe child van het voorgaande element geselecteerd.*/
 main .shopping-gallery > figure,
 main .shop-the-fit > figure,
 main .popular-brands > figure,
@@ -249,7 +249,7 @@ main .popular-brands h3 {
 /* --mask is een variable met een lineair verloop. De kleur begint transparant,
 wordt zwart, en gaat daarna weer naar transparant.
 Met -webkit-mask: var(--mask); wordt het masker toegepast en doormiddel van -webkit-mask: worden
-oudere versies van de brouwser ondersteund.*/
+oudere versies van de browser ondersteund.*/
 main .shopping-gallery > figure a,
 main .shop-the-fit > figure a,
 main .popular-brands > figure a,
@@ -314,7 +314,7 @@ main .shopping-gallery article a .product-price {
 /* --mask is een variable met een lineair verloop. De kleur begint transparant,
 wordt zwart, en gaat daarna weer naar transparant.
 Met -webkit-mask: var(--mask); wordt het masker toegepast en doormiddel van -webkit-mask: worden
-oudere versies van de brouwser ondersteund.*/
+oudere versies van de browser ondersteund.*/
 main .shopping-gallery article a figure {
     display: block;
     position: absolute;
@@ -354,6 +354,11 @@ main .shop-the-fit article header button {
     top: 0.5rem;
 }
 
+/* Hiermee wordt een CSS-variabele --mask gedefinieerd die een 
+lineaire gradiënt laat zien. Deze gradiënt is diagonaal 
+en heeft een hoek van 45 graden en vier kleurstops. De kleur is 
+telkens ingesteld op de waarde van --dark, en de derde kleurstop 
+gebruikt de calc-functie om een dynamische waarde te berekenen. */
 main .shop-the-fit article header figure {
     padding: 0.375rem;
     left: 0.5rem;
@@ -374,42 +379,42 @@ main .shop-the-fit article header figure {
 }
 
 .highlights h3 {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .highlights article {
     background: var(--dark);
     text-align: left;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .highlights article figure:last-child {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 /* Border met 1px, en met solid wordt het een rechte lijn.*/
 body > footer {
-    border-top: 1px solid var(--dark);
+    border-top: 0.0625rem solid var(--dark);
 }
 
 body > footer form {
-    padding: 32px 16px;
-    border-bottom: 1px solid var(--dark);
+    padding: 2rem 1rem;
+    border-bottom: 0.0625rem solid var(--dark);
 }
 
 body > footer form h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 1.5rem;
 }
 
 body > footer form p {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 
 body > footer form label input:first-of-type {
@@ -426,7 +431,7 @@ input[type="checkbox" i] {
     cursor: default;
     appearance: auto;
     box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
+    margin: 0.1875rem 0.1875rem 0.1875rem 0.25rem;
     padding: initial;
     border: initial;
 }
@@ -436,11 +441,12 @@ body > footer form label span {
     z-index: 0;
     border: none;
     width: 100%;
-    max-width: 22px;
-    margin-right: 36px;
+    max-width: 1.375rem;
+    margin-right: 2.25rem;
 }
 
-/* Content "" betekent geen conetent hebben.*/
+/* Content "" betekent geen conetent hebben.
+met chip-path wordt een zichtbaar element afgeknipt.*/
 body > footer form label span:nth-of-type(1):before {
     content: "";
     position: absolute;
@@ -470,8 +476,8 @@ body > footer form label span:nth-of-type(1):before {
         calc(100% - 5.41px) 1px,
         1px 1px
     );
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 body > footer form label input:checked + span:nth-of-type(1):before {
@@ -483,39 +489,41 @@ body > footer form label input:checked + span:nth-of-type(1):before {
     clip-path: unset;
 }
 
-/* + betekent een opsomming van daarna.*/
+/* + betekent een opsomming van daarna.
+nth-of-type(1) betekent het eerste element dat voorkomt.
+::after betekent het kunnen opmaken van de inhoud na het geselecteerde item. */
 body > footer form label input:checked + span:nth-of-type(1)::after {
     content: "";
     background-color: transparent;
     z-index: 1;
     position: absolute;
-    width: 5.5px;
-    height: 10.5px;
-    border: 2px solid;
+    width: 0.3438rem;
+    height: 0.6563rem;
+    border: 0.125rem solid;
     border-color: transparent white white transparent;
-    border-width: 2px 2px 2px 1px;
+    border-width: 0.125rem 0.125rem 0.125rem 0.0625rem;
     transform: rotate(45deg);
-    left: 7.5px;
-    top: 3px;
+    left: 0.0468rem;
+    top: 0.1875rem;
 }
 
 body > footer form section {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
 }
 
 body > footer form section span {
     display: block;
     margin: 0 auto;
-    padding: 16px;
+    padding: 1rem;
     position: relative;
     z-index: 0;
     border: none;
     width: 100%;
-    max-width: 432px;
-    padding: 15px 20px;
+    max-width: 27rem;
+    padding: 0.938rem 1.25rem;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
     text-transform: uppercase;
     box-sizing: border-box;
 }
@@ -523,15 +531,15 @@ body > footer form section span {
 body > footer form section span input {
     background-color: var(--background-color);
     font-weight: 400 !important;
-    font-size: 14px !important;
-    line-height: 20px !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
     color: var(--dark) !important;
     border-bottom: 0 !important;
     width: 100% !important;
     color: var(--text-color);
     max-width: 100%;
-    border: 0px;
-    border-bottom: 1px solid var(--text-color);
+    border: 0rem;
+    border-bottom: 0.0625rem solid var(--text-color);
     border-radius: 0;
 }
 
@@ -581,27 +589,27 @@ main > section > section:nth-of-type(4) > ul {
 
 body > footer > ul:first-of-type li,
 main > section > section:nth-of-type(4) > ul > li {
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
     list-style-type: none;
     text-transform: uppercase;
     font-weight: 700;
-    border-top: 1px solid var(--light-gray);
+    border-top: 0.0625rem solid var(--light-gray);
 }
 
 body > footer > ul:first-of-type li a {
     text-decoration: none;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     color: var(--text-color);
 }
 
 body > footer > ul:first-of-type li details ul {
-    padding-top: 12px;
+    padding-top: 0.75rem;
 }
 
 body > footer > ul:first-of-type li details ul li {
-    padding: 12px 0;
+    padding: 0.75rem 0;
     border-top: none;
     text-transform: capitalize;
 }
@@ -635,23 +643,23 @@ main > section > section:nth-of-type(4) > ul li details summary::-webkit-details
 
 body > footer > p {
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-transform: capitalize;
 }
 
 body > footer > figure {
     display: flex;
     justify-content: center;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--dark);
+    padding: 1.5rem 0;
+    border-bottom: 0.0625rem solid var(--dark);
 }
 
 body > footer > figure img {
-    width: 25px;
+    width: 1.5625rem;
 }
 
 body > footer nav {
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
 }
 
 body > footer nav ul {
@@ -662,9 +670,9 @@ body > footer nav ul {
 /* Met inline block kan je elementen ernaast krijgen.*/
 body > footer nav ul li {
     display: inline-block;
-    padding-right: 22px;
+    padding-right: 1.375rem;
     list-style: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
 }
 
@@ -673,37 +681,37 @@ main > section > section:first-of-type {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 16px;
-    padding-top: 24px;
+    padding: 1rem;
+    padding-top: 1.5rem;
 }
 
 main > section > section:first-of-type section:first-of-type {
-    padding-right: 10px;
+    padding-right: 0.625rem;
 }
 
 main > section > section:first-of-type section:nth-of-type(2) p:nth-child(2) {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 700;
-    line-height: 15px;
+    line-height: 0.9375rem;
     color: var(--dark);
     opacity: 0.3;
     display: block;
-    margin-top: 8px;
+    margin-top: 0.5rem;
 }
 
 main > section > section:first-of-type section:nth-of-type(2) p:first-child {
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 1.375rem;
+    line-height: 1.6875rem;
     font-weight: 400;
 }
 
 main > section > section:nth-of-type(2) section {
     display: inline-block;
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
     list-style-type: none;
     text-transform: uppercase;
     font-weight: 700;
-    border-top: 1px solid var(--light-gray);
+    border-top: 0.0625rem solid var(--light-gray);
     width: 100%;
     box-sizing: border-box;
 }
@@ -714,40 +722,40 @@ main > section > section:nth-of-type(2) section p {
 
 main > section > section:nth-of-type(2) section p:first-child {
     width: 30%;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
 }
 
 main > section > section:nth-of-type(2) section p:nth-child(2) {
     width: 65%;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 0.9375;
     font-weight: 400;
 }
 
 main > section > section:nth-of-type(3) {
-    padding: 0 16px;
+    padding: 0 1rem;
 }
 
 main > section > section:nth-of-type(3) ul {
     margin: 0;
-    padding: 0 16px;
+    padding: 0 1rem;
     list-style-type: square;
 }
 
 main > section > section:nth-of-type(3) ul li {
     line-height: 2rem;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 main > section > section:nth-of-type(4) ul li:last-of-type {
-    border-bottom: 1px solid var(--light-gray);
+    border-bottom: 0.0625rem solid var(--light-gray);
 }
 
 main > section > section:nth-of-type(4) ul li {
     font-weight: 400;
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 main > section > section:nth-of-type(4) ul li details p {
@@ -763,17 +771,17 @@ main > section > section:nth-of-type(4) ul li details[open] summary::after {
 }
 
 main > section > section:nth-of-type(5) {
-    padding: 80px 0;
+    padding: 5rem 0;
 }
 
 main > section > section:nth-of-type(5) > h2 {
     font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 1.375rem;
+    line-height: 1.6875rem;
     text-transform: capitalize;
-    padding-left: 24px;
+    padding-left: 1.5rem;
 }
 
 main > section > section:nth-of-type(5) article > *:not(img) {
-    padding-left: 24px;
+    padding-left: 1.5rem;
 }
